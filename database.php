@@ -9,6 +9,9 @@
 	if (!$link) {
     	die('<p style="color:red">'.mysqli_connect_errno().' - '.mysqli_connect_error().'</p>');
 	}
+	if(!mysqli_set_charset($link, "utf8")){
+		printf("Error: ".mysqli_error($link));
+	}
 		
     echo "<p>Вы подключились к MySQL!</p>";
 

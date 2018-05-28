@@ -9,6 +9,7 @@
 <body>
     <div>
         <h1>Тест</h1>
+        <a href="admin">Панелька</a>
         <div>
         <?php foreach ($articles as $a): ?> 
             <div>
@@ -16,7 +17,7 @@
                         <?=$a['title']?>
                     </a></h3>
                 <em>Опубликовано:<?=$a['date']?></em>
-                <p><?=$a['content']?></p>
+                <p><?=articles_intro($a['content'])?>...</p>
             </div>
         <?php endforeach ?> 
         </div>
